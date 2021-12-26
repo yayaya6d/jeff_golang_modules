@@ -3,6 +3,7 @@ module jeff_golang_modules
 go 1.15
 
 require (
+	github.com/gin-gonic/gin v1.7.7 // indirect
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/stretchr/testify v1.7.0
