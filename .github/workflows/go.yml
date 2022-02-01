@@ -25,10 +25,8 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    - name: Start MongoDB container v${{ matrix.mongodb-version }}
-      uses: supercharge/mongodb-github-action@1.2.0
-      with:
-        mongodb-version: ${{ matrix.mongodb-version }}
+    - name: Run UT container
+      uses: docker-compose -f "docker-compose.yaml" up -d
 
     - name: Test
       run: go test -v ./...
