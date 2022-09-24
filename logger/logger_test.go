@@ -53,6 +53,7 @@ func (s *LoggerTestSuite) TestSetLoggerLevel_GivenInvalidLevel_ReturnError() {
 
 func (s *LoggerTestSuite) TestInfo_GivenMsg_PrintLogCorrectly() {
 	// arrange
+	Log.SetLoggerLevel("info")
 	var buf bytes.Buffer
 	Log.SetOutput(&buf)
 	expecteOutput := logOutput{
@@ -72,6 +73,7 @@ func (s *LoggerTestSuite) TestInfo_GivenMsg_PrintLogCorrectly() {
 
 func (s *LoggerTestSuite) TestWithField_GivenField_PrintLogCorrectly() {
 	// arrange
+	Log.SetLoggerLevel("info")
 	var buf bytes.Buffer
 	Log.SetOutput(&buf)
 
@@ -101,6 +103,7 @@ func (s *LoggerTestSuite) TestWithField_GivenField_PrintLogCorrectly() {
 
 func (s *LoggerTestSuite) TestWithField_GivenFields_PrintLogCorrectly() {
 	// arrange
+	Log.SetLoggerLevel("info")
 	var buf bytes.Buffer
 	Log.SetOutput(&buf)
 
